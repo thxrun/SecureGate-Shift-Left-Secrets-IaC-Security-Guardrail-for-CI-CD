@@ -1,0 +1,1 @@
+# SecureGate-Shift-Left-Secrets-IaC-Security-Guardrail-for-CI-CD
