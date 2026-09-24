@@ -1,0 +1,20 @@
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.18.4
+    hooks:
+      - id: gitleaks
+
+  - repo: https://github.com/bridgecrewio/checkov
+    rev: 3.2.100
+    hooks:
+      - id: checkov
+        args:
+          - "--directory"
+          - "terraform/"
+          - "--skip-path"
+          - "bad-example"
+          - "--skip-check"
+          - "CKV2_AWS_62,CKV2_AWS_61,CKV_AWS_144,CKV_AWS_18,CKV2_AWS_67,CKV2_AWS_5"
+          - "--compact"
+          - "--quiet"
+        pass_filenames: false
